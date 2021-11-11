@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Question Game</title>
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+
+        <!-- Section Point -->
+        <div class="row justify-content-center mt-5 pt-5" id="questionsPoint">
+            <div class="col-8 ">
+                <span class="h1 d-block bg-dark text-light text-center p-5">
+                    Total point : 0%
+                </span>
+            </div>
+        </div>
+
+        <!-- Section Start Game -->
+        <div class="row  justify-content-center mt-5 pt-5" id="questionsButtons">
+            <div class="col-3 mt-5">
+                <button class="btn btn-dark btn-block shadow" id="startButton">
+                    <span class="h2">
+                        Start
+                    </span>
+                </button>
+                <button class="btn btn-dark mt-3 btn-block shadow" id="exitButton">
+                    <span class="h2">
+                        Exit
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Section Game Area -->
+        <div class="row mt-5 d-none" id="questionsHeader">
+            <div class="col-12">
+                <div class="progress" id="progressQuestion">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: calc(100%/2)"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-5">
+                <div class="jumbotron jumbotron-fluid rounded bg-dark text-white" id="questionTitle">
+                    <div class=" container">
+                        <h1 class="display-5 text text-center font-weight-bold">Question 1</h1>
+                        <p class="h5 text-center">This is a modified jumbotron that occupies the entire horizontal space
+                            of its
+                            parent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 d-none" id="questionsList">
+            <!-- <div class="col">
+                <div class="card">
+                    <div class="card-header h4  bg-dark bg-success text-white">
+                        A)
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item h5">An item</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header h4  bg-dark text-white">
+                        B)
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item h5">An item</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header h4  bg-dark  bg-danger text-white"">
+                        C)
+                    </div>
+                    <ul class=" list-group list-group-flush">
+                        <li class="list-group-item h5">An item</li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+        <script src='./assents/js/index.js'></script>
+
+</body>
+
+</html>
