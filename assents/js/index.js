@@ -108,7 +108,7 @@ class Question {
 
             setTimeout(() => {
                 this.changeQuestion()
-            }, 1500)
+            }, 1000)
         } else {
             let wrongCard = document.querySelector(`#card${selectCardID} .h4`)
             wrongCard.classList.remove('bg-dark')
@@ -116,7 +116,7 @@ class Question {
 
             setTimeout(() => {
                 this.changeQuestion()
-            }, 1500)
+            }, 1000)
         }
 
     }
