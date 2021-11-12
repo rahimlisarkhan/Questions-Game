@@ -27,8 +27,10 @@ let questionsData = {
 }
 
 class Question {
-    questionsPoint = document.querySelector('#questionsPoint')
-    questionsPointSpan = document.querySelector('#questionsPoint span')
+    //Encapsulation / private key
+    #questionsPoint = document.querySelector('#questionsPoint')
+    #questionsPointSpan = document.querySelector('#questionsPoint span')
+
     questionsButtons = document.querySelector('#questionsButtons')
     questionsHeader = document.querySelector('#questionsHeader')
     questionsList = document.querySelector('#questionsList')
@@ -47,7 +49,7 @@ class Question {
         let progressQuestion = document.querySelector('#progressQuestion .progress-bar')
         let questionNum = this.nextQuestion + 1
         let answers = this.question[this.nextQuestion] && this.question[this.nextQuestion].answers
-        this.questionsPointSpan.innerHTML = `Total point : ${this.point}%`
+        this.#questionsPointSpan.innerHTML = `Total point : ${this.point}%`
 
 
         if (!answers) {
@@ -108,7 +110,7 @@ class Question {
 
             setTimeout(() => {
                 this.changeQuestion()
-            }, 1000)
+            }, 700)
         } else {
             let wrongCard = document.querySelector(`#card${selectCardID} .h4`)
             wrongCard.classList.remove('bg-dark')
@@ -116,22 +118,22 @@ class Question {
 
             setTimeout(() => {
                 this.changeQuestion()
-            }, 1000)
+            }, 700)
         }
 
     }
 
-    reset = () => {
+    #reset = () => {
         this.questionsHeader.classList.toggle('d-none')
         this.questionsList.classList.toggle('d-none')
-        this.questionsPoint.classList.toggle('d-none')
+        this.#questionsPoint.classList.toggle('d-none')
         this.questionsButtons.classList.toggle('d-none')
         this.point = 0
         this.nextQuestion = 0
         this.progressLine = 0
     }
 
-    randomQuestions = () => {
+    #randomQuestions = () => {
         let mixQuestionsCount = this.question.length - 1
 
         while (mixQuestionsCount) {
@@ -143,8 +145,8 @@ class Question {
     }
 
     runApp = () => {
-        this.randomQuestions()
-        this.reset()
+        this.#randomQuestions()
+        this.#reset()
         this.changeQuestion()
     }
 }
