@@ -1,3 +1,5 @@
+
+
 let questionsData = {
     q1: {
         desc: "What color is the sky?",
@@ -5,7 +7,7 @@ let questionsData = {
         trueAnswer: "A"
     },
     q2: {
-        desc: "What do you call people who are 18+?",
+        desc: "What do you call people who are 18+ ?",
         answers: ["Baby", "Adult", "Person"],
         trueAnswer: "B"
     },
@@ -15,12 +17,12 @@ let questionsData = {
         trueAnswer: "C"
     },
     q4: {
-        desc: "What do you call someone who has a wife??",
+        desc: "What do you call someone who has a wife?",
         answers: ["Wife", "Husband", "Married"],
         trueAnswer: "C"
     },
     q5: {
-        desc: "Which is the most us level in English??",
+        desc: "Which is the most us level in English?",
         answers: ["B1", "C2", "A2"],
         trueAnswer: "B"
     }
@@ -54,7 +56,6 @@ class Question {
 
         if (!answers) {
             this.#reset() 
-            debugger
             return
         }
 
