@@ -53,7 +53,8 @@ class Question {
 
 
         if (!answers) {
-            this.reset()
+            this.#reset() 
+            debugger
             return
         }
 
